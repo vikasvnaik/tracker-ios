@@ -26,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getLocation() {
+        ///hahhhahhahahaha
         progressBar.startAnimating()
         self.progressBar.isHidden = false
         if (CLLocationManager.locationServicesEnabled()) {
