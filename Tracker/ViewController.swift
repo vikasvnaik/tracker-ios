@@ -33,7 +33,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManger.delegate = self
             locationManger.desiredAccuracy = kCLLocationAccuracyBest
             locationManger.requestWhenInUseAuthorization()
-            locationManger.requestLocation()
+            locationManger.startUpdatingLocation()
         }
         
     }
@@ -73,7 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
                                formatter.timeZone = TimeZone.current
 
-                               formatter.dateFormat = "yyyy-MM-dd HH:mm"
+                               formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
                                let dateString = formatter.string(from: now)
                             self.time.text = dateString
